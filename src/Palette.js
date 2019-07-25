@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import PaletteFooter from './PaletteFooter';
-import './Palette.css';
+import './styles/Palette.css';
 
 
 export default class Palette extends Component {

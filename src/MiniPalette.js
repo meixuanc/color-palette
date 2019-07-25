@@ -42,6 +42,7 @@ const styles = {
         marginBottom: '-3.5px'
     }
 }
+
 function MiniPalette(props) {
     const { classes, paletteName, emoji, colors, id } = props;
     const miniColorBoxes = colors.map(color => (
