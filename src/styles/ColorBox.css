@@ -1,9 +1,11 @@
-@media screen and (max-width: 900px) {
-    .ColorBox {Width: 50% !important};
+@media screen and (max-width: 991.98px) {
+    .ColorBox {Width: 50% !important; Height: 10% !important}
+    .SingleColorPalette .ColorBox { Height: 20% !important }
 }
 
-@media screen and (max-width: 400px) {
-    .ColorBox {Width: 100% !important};
+@media screen and (max-width: 575.98px) {
+    .ColorBox {Width: 100% !important; Height: 5% !important}
+    .SingleColorPalette .ColorBox { Height: 10% !important }
 }
 
  .ColorBox {

@@ -14,9 +14,13 @@ import ColorPicker from './ColorPicker';
 import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
+    static defaultProps = {
+        maxColors: 20
+    };
+
     state = {
         open: true,
-        colors: this.props.palettes[0].colors,
+        colors: this.props.palettes[0].colors
     };
 
     handleDrawerOpen = () => {
@@ -67,7 +71,7 @@ class NewPaletteForm extends Component {
     }
 
     render() {
-        const { classes, palettes } = this.props;
+        const { classes, palettes, maxColors } = this.props;
         const { open } = this.state;
 
         return (
@@ -96,14 +100,29 @@ class NewPaletteForm extends Component {
                     <div className={classes.drawerContainer}>
                         <Typography variant="h4">Design Your Palette</Typography>
                         <div className={classes.buttons}>
-                            <Button className={classes.button} variant="contained" color='secondary' onClick={this.clearColors}>Clear Palette</Button>
-                            <Button className={classes.button} variant="contained" color='primary' onClick={this.addRandomColor}>Random Color</Button>
+                            <Button 
+                                className={classes.button} 
+                                variant="contained" 
+                                color='secondary' 
+                                onClick={this.clearColors}
+                            >
+                                Clear Palette
+                            </Button>
+                            <Button 
+                                className={classes.button} 
+                                variant="contained" 
+                                color='primary' 
+                                onClick={this.addRandomColor} 
+                                disabled={this.state.colors.length === maxColors}
+                            >
+                                Random Color
+                            </Button>
                         </div>
                         <ColorPicker
-                            currentColor={this.state.currentColor}
                             newColorName={this.state.newColorName}
                             addNewColor={this.addNewColor}
                             colors={this.state.colors}
+                            maxColors={maxColors}
                         />
                     </div>
                 </Drawer>

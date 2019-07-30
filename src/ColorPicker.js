@@ -6,6 +6,10 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from './styles/ColorPickerStyles'
 
 class ColorPicker extends Component {
+    static defaultProps = {
+        maxColors: 20
+    };
+
     state = {
         currentColor: "purple",
         newColorName: ""
@@ -41,7 +45,8 @@ class ColorPicker extends Component {
     }
 
     render() {
-        const { currentColor, classes } = this.props;
+        const { classes, maxColors, colors } = this.props;
+        const full = colors.length === maxColors;
         return (
             <div>
                 <ChromePicker 
@@ -66,10 +71,13 @@ class ColorPicker extends Component {
                     <Button 
                         variant="contained" 
                         color='primary' 
-                        style={{ backgroundColor: currentColor }} 
+                        style={{ backgroundColor: full ? 'gray' : this.state.currentColor }} 
                         type='submit'
                         className={classes.addColor}
-                    >Add Color</Button>
+                        disabled={full}
+                    >
+                        { full ? 'Palette Full' : 'Add Color' }
+                    </Button>
                 </ValidatorForm>
             </div>
         )

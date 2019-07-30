@@ -1,3 +1,5 @@
+import sizes from './sizes';
+
 const drawerWidth = 400;
 const styles = theme => ({
     root: {
@@ -31,10 +33,17 @@ const styles = theme => ({
         marginRight: '1rem',
         "& a": {
             textDecoration: 'none'
-        }
+        },
+        [sizes.down('md')]: {
+            margin: '0rem'
+        },
     },
     button: {
-        margin: "0 0.5rem"
+        margin: "0 0.5rem",
+        [sizes.down('sm')]: {
+            margin: '0 0.2rem',
+            padding: '0.2rem'
+        }
     }
 })
 
