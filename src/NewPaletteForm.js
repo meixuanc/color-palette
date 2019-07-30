@@ -11,69 +11,11 @@ import DraggableColorList from "./DraggableColorList";
 import { arrayMove } from "react-sortable-hoc";
 import FormNav from './FormNav';
 import ColorPicker from './ColorPicker';
-
-const drawerWidth = 400;
-
-const styles = theme => ({
-    root: {
-        display: 'flex'
-    },
-    hide: {
-        display: 'none',
-    },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0
-    },
-    drawerPaper: {
-        width: drawerWidth,
-        display: 'flex',
-        alignItems: 'center'
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
-    },
-    content: {
-        height: 'calc(100vh - 64px)',
-        flexGrow: 1,
-        padding: theme.spacing(3),
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        marginLeft: -drawerWidth,
-    },
-    contentShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: 0,
-    },
-    drawerContainer: {
-        width: '80%',
-        height: '80%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    buttons: {
-        width: "100%"
-    },
-    button: {
-        width: "50%"
-    }
-});
+import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
     state = {
-        open: false,
-        // colors: [],
+        open: true,
         colors: this.props.palettes[0].colors,
     };
 
@@ -101,12 +43,9 @@ class NewPaletteForm extends Component {
         });
     }
 
-    savePalette = (newName) => {
-        const newPalette = {
-            paletteName: newName,
-            id: newName.toLowerCase().replace(/ /g, '-'),
-            colors: this.state.colors
-        };
+    savePalette = (newPalette) => {
+        newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
+        newPalette.colors = this.state.colors;
         this.props.savePalette(newPalette);
         this.props.history.push("/");
     }

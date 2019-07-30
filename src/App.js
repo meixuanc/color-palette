@@ -9,7 +9,7 @@ import NewPaletteForm from './NewPaletteForm';
 
 export default class App extends Component {
     state = {
-        palettes: seedPalettes
+        palettes: JSON.parse(window.localStorage.getItem('palettes')) || seedPalettes
     }
 
     findPalette = (id) => {
@@ -19,13 +19,24 @@ export default class App extends Component {
     }
 
     savePalette = (newPalette) => {
-        this.setState({ palettes: [...this.state.palettes, newPalette] })
+        this.setState({ palettes: [...this.state.palettes, newPalette] }, this.syncLocalStorage)
+    }
+
+    syncLocalStorage = () => {
+        window.localStorage.setItem("palettes", JSON.stringify(this.state.palettes))
+    }
+
+    deletePalette = (id) => {
+        this.setState(st => ({palettes: st.palettes.filter(palette => palette.id !== id)}), this.syncLocalStorage)
     }
 
     render() {
         return (
             <Switch>
-                <Route exact path='/' render={(routeProps) => <PaletteList palettes={this.state.palettes} {...routeProps} />} />
+                <Route exact path='/' render={
+                    (routeProps) => 
+                        <PaletteList palettes={this.state.palettes} deletePalette={this.deletePalette} {...routeProps} />} 
+                />
                 <Route exact path='/palette/new' 
                     render={(routeProps) => 
                         <NewPaletteForm 
