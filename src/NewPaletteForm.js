@@ -12,6 +12,7 @@ import { arrayMove } from "react-sortable-hoc";
 import FormNav from './FormNav';
 import ColorPicker from './ColorPicker';
 import styles from './styles/NewPaletteFormStyles';
+import seedPalettes from './seedPalettes';
 
 class NewPaletteForm extends Component {
     static defaultProps = {
@@ -20,7 +21,7 @@ class NewPaletteForm extends Component {
 
     state = {
         open: true,
-        colors: this.props.palettes[0].colors
+        colors: seedPalettes[0].colors
     };
 
     handleDrawerOpen = () => {
@@ -65,9 +66,15 @@ class NewPaletteForm extends Component {
     }
 
     addRandomColor = () => {
-        const allColors = this.props.palettes.map(palette => palette.colors).flat();
+        const allColors = seedPalettes.map(palette => palette.colors).flat();
         let random = Math.floor(Math.random() * allColors.length);
-        this.setState({ colors: [...this.state.colors, allColors[random]] })
+        let randomColor = allColors[random];
+        let check = () => (this.state.colors.some(color => color.name === randomColor.name));
+        while (check()) {
+            random = Math.floor(Math.random() * allColors.length);
+            randomColor = allColors[random];
+        }
+        this.setState({ colors: [...this.state.colors, randomColor] })
     }
 
     render() {
@@ -137,6 +144,7 @@ class NewPaletteForm extends Component {
                         removeColor={this.removeColor}
                         axis="xy"
                         onSortEnd={this.onSortEnd}
+                        distance={5}
                     />
                 </main>
             </div>

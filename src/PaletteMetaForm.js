@@ -40,7 +40,8 @@ export default class PaletteMetaForm extends Component {
 
     savePalette = (emoji) => {
         const newPalette = {paletteName: this.state.newPaletteName, emoji: emoji.native}
-        this.props.savePalette(newPalette)
+        this.setState({ stage: ""});
+        this.props.savePalette(newPalette);
     }
 
     render() {

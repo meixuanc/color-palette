@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { withStyles } from '@material-ui/styles';
 import styles from './styles/MiniPaletteStyles';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-class MiniPalette extends Component {
+class MiniPalette extends PureComponent {
     handleClick = () => {
         this.props.handleClick(this.props.id);
     }
     deletePalette = (evt) => {
         evt.stopPropagation();
-        // this.props.deletePalette(this.props.id);
         this.props.openDialog(this.props.id);
     }
 

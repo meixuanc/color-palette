@@ -1,4 +1,5 @@
 import sizes from './sizes';
+import chroma from 'chroma-js';
 
 const styles = {
     draggableColorBox: {
@@ -20,6 +21,10 @@ const styles = {
         [sizes.down('sm')]: {
             width: '100%',
             height: '5%'
+        },
+        "&:hover svg": {
+            color: "white",
+            transform: "scale(1.5)"
         }
     },
     boxContent: {
@@ -28,15 +33,15 @@ const styles = {
         left: "0px",
         bottom: "0px",
         padding: "10px",
-        color: "rgba(0,0,0,0.5)",
+        // color: "rgba(0,0,0,0.5)",
         letterSpacing: "1px",
         fontSize: "12px",
         display: "flex",
         justifyContent: "space-between",
-        "&:hover svg": {
-            color: "white",
-            transform: "scale(1.5)"
-        }
+        color: props =>
+            chroma(props.color).luminance() <= 0.1
+            ? 'rgba(255,255,255,0.8)'
+            : 'rgba(0.0.0.0.6)'
     },
     deleteIcon: {
         fontSize: "16px",
