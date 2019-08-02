@@ -30,7 +30,7 @@ export default class Navbar extends Component {
 				</div>
 				{this.props.showSlider && (
 					<div className="slider-container">
-						<span>Level: {this.props.level} </span>
+						<span className="color-level">Level: {this.props.level} </span>
 						<div className="slider">
 							<Slider
 								defaultValue={this.props.level}

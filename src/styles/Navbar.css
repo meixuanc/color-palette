@@ -13,6 +13,18 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.logo {
+		font-size: 15px !important;
+	}
+	.slider {
+		width: 60px !important;
+	}
+	.color-level {
+		font-size: 5px;
+	}
+}
+
 .Navbar {
 	display: flex;
 	align-items: center;

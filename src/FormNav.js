@@ -58,7 +58,7 @@ class FormNav extends Component {
 							</Button>
 						</Link>
 						<Button variant="contained" color="primary" onClick={this.showForm} className={classes.button}>
-							Save Palette
+							Save
 						</Button>
 					</div>
 				</AppBar>
