@@ -18,10 +18,13 @@
 		font-size: 15px !important;
 	}
 	.slider {
-		width: 60px !important;
+		width: 65px !important;
 	}
 	.color-level {
-		font-size: 5px;
+		font-size: 15px;
+	}
+	.select-container {
+		width: 100px;
 	}
 }
 
