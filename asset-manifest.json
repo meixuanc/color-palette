@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/color-palette/static/css/main.a9f13639.chunk.css",
-    "main.js": "/color-palette/static/js/main.23ca6fa6.chunk.js",
-    "main.js.map": "/color-palette/static/js/main.23ca6fa6.chunk.js.map",
-    "runtime~main.js": "/color-palette/static/js/runtime~main.56200f79.js",
-    "runtime~main.js.map": "/color-palette/static/js/runtime~main.56200f79.js.map",
-    "static/css/2.e337d257.chunk.css": "/color-palette/static/css/2.e337d257.chunk.css",
-    "static/js/2.92066094.chunk.js": "/color-palette/static/js/2.92066094.chunk.js",
-    "static/js/2.92066094.chunk.js.map": "/color-palette/static/js/2.92066094.chunk.js.map",
-    "index.html": "/color-palette/index.html",
-    "precache-manifest.80f134727357f294bddf4d83084cd684.js": "/color-palette/precache-manifest.80f134727357f294bddf4d83084cd684.js",
-    "service-worker.js": "/color-palette/service-worker.js",
-    "static/css/2.e337d257.chunk.css.map": "/color-palette/static/css/2.e337d257.chunk.css.map",
-    "static/css/main.a9f13639.chunk.css.map": "/color-palette/static/css/main.a9f13639.chunk.css.map",
-    "static/media/bg.svg": "/color-palette/static/media/bg.e7fb7940.svg"
+    "main.css": "/static/css/main.a9f13639.chunk.css",
+    "main.js": "/static/js/main.a1024429.chunk.js",
+    "main.js.map": "/static/js/main.a1024429.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.e337d257.chunk.css": "/static/css/2.e337d257.chunk.css",
+    "static/js/2.92066094.chunk.js": "/static/js/2.92066094.chunk.js",
+    "static/js/2.92066094.chunk.js.map": "/static/js/2.92066094.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c01161241c0aab71267c9ac5b35b0fd0.js": "/precache-manifest.c01161241c0aab71267c9ac5b35b0fd0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.e337d257.chunk.css.map": "/static/css/2.e337d257.chunk.css.map",
+    "static/css/main.a9f13639.chunk.css.map": "/static/css/main.a9f13639.chunk.css.map",
+    "static/media/bg.svg": "/static/media/bg.e7fb7940.svg"
   }
 }
