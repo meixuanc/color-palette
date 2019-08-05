@@ -1,5 +1,5 @@
 # color-palette
-* You can view the website on https://master.dj8bcfesocy8x.amplifyapp.com/
+* You can view the website on https://meixuanc.github.io/color-palette/ or https://master.dj8bcfesocy8x.amplifyapp.com/
 * A beautiful websites like [Flat UI Colors](flatuicolors.com) and [Material UI Colors](materialuicolors.co)
 * Using React.js, Material-UI
 
