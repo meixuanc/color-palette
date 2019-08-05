@@ -18,7 +18,6 @@ export default class Palette extends Component {
 		const colorBoxes = colors[level].map((color) => (
 			<ColorBox color={color[format]} name={color.name} key={color.id} id={color.id} paletteId={id} />
 		));
-		console.log(this.props.routeProps);
 		return (
 			<div className="Palette">
 				<Navbar level={level} changeLevel={this.changeLevel} handleFormatChange={this.changeFormat} />
