@@ -6,6 +6,7 @@ const styles = {
 		position: 'relative',
 		overflow: 'hidden',
 		cursor: 'pointer',
+		minHeight: '180px',
 		'&:hover svg': {
 			opacity: 1
 		}

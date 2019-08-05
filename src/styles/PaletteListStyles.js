@@ -53,7 +53,6 @@ const styles = {
 		boxSizing: 'border-box',
 		width: '100%',
 		height: '95%',
-		minHeight: '660px',
 		display: 'grid',
 		gridTemplateColumns: 'repeat(3,30%)',
 		gridGap: '1.5rem',
@@ -64,6 +63,9 @@ const styles = {
 		[sizes.down('xs')]: {
 			gridTemplateColumns: 'repeat(1,100%)'
 		}
+	},
+	miniPalette: {
+		minHeight: '17760px'
 	}
 };
 
