@@ -63,9 +63,6 @@ const styles = {
 		[sizes.down('xs')]: {
 			gridTemplateColumns: 'repeat(1,100%)'
 		}
-	},
-	miniPalette: {
-		minHeight: '17760px'
 	}
 };
 

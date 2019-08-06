@@ -2,7 +2,7 @@
 	"name": "color-palette",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://meixuanc.github.io/color-palette",
+	"homepage": "https://meixuanc.github.io/react-color-palette",
 	"dependencies": {
 		"@material-ui/core": "^4.2.1",
 		"@material-ui/icons": "^4.2.1",
